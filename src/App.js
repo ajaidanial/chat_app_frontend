@@ -4,6 +4,7 @@ import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Chat from './pages/Chat'
 import ForgotPassword from './pages/ForgotPassword'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <SignUp />
       <Chat />
       <ForgotPassword />
+      <NotFound />
     </div>
   );
 }
