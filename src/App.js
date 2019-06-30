@@ -1,21 +1,18 @@
-import React from 'react';
-import './App.css';
-import SignIn from './pages/SignIn'
-import SignUp from './pages/SignUp'
-import Chat from './pages/Chat'
-import ForgotPassword from './pages/ForgotPassword'
-import NotFound from './pages/NotFound'
+import React, { Component } from 'react';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import Routes from './Routes';
 
-function App() {
-  return (
-    <div>
-      <SignIn />
-      <SignUp />
-      <Chat />
-      <ForgotPassword />
-      <NotFound />
-    </div>
-  );
+const browserHistory = createBrowserHistory();
+
+export class App extends Component {
+    render() {
+        return (
+            <Router history={browserHistory}>
+                <Routes />
+            </Router>
+        );
+    }
 }
 
 export default App;
